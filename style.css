@@ -65,6 +65,7 @@ body {
   margin: 0 auto;
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card {
@@ -125,6 +126,7 @@ body {
 
   & .card__signup {
     background-color: var(--clr-bright-yellow);
+    font-size: 1.7rem;
     font-weight: var(--fw-700);
     text-decoration: none;
     border-radius: 0.5rem;
