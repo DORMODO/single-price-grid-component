@@ -1,0 +1,142 @@
+:root {
+  --clr-cyan: hsl(179, 62%, 43%);
+  --clr-light-cyan: hsl(179, 47%, 52%);
+  --clr-bright-yellow: hsl(71, 73%, 54%);
+  --clr-light-gray: hsl(204, 43%, 93%);
+  --clr-grayish-blue: hsl(218, 22%, 67%);
+
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* End CSS Reset */
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--clr-light-gray);
+  height: 100vh;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  width: 65rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card {
+  color: var(--clr-light-gray);
+  line-height: 1.5;
+  padding: 4rem;
+
+  .card__title {
+    font-size: 2rem;
+    font-weight: var(--fw-700);
+    margin-bottom: 1.5rem;
+  }
+}
+
+.community-join {
+  grid-column: span 2;
+
+  & .card__title {
+    font-size: 2.5rem;
+    color: var(--clr-cyan);
+  }
+
+  & .card__guarantee {
+    font-weight: var(--fw-700);
+    color: var(--clr-bright-yellow);
+    margin-bottom: 1.5rem;
+  }
+
+  & .card__description {
+    color: var(--clr-grayish-blue);
+  }
+}
+
+.subscription-plan {
+  background-color: var(--clr-cyan);
+
+  & .card__price-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  & .card__price {
+    font-size: 3.5rem;
+    font-weight: var(--fw-700);
+  }
+
+  & .price__duration {
+    color: var(--clr-light-gray);
+    opacity: 0.5;
+    font-size: 1.6rem;
+    font-weight: var(--fw-400);
+  }
+
+  & .card__benefit {
+    margin-bottom: 3rem;
+  }
+
+  & .card__signup {
+    background-color: var(--clr-bright-yellow);
+    font-weight: var(--fw-700);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    padding: 1.3rem 9rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.reasons-to-choose {
+  background-color: var(--clr-light-cyan);
+
+  & .card__features {
+    opacity: 0.8;
+  }
+}
